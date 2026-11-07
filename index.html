@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meerim Myrzalieva | Portfolio</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1d2433;
+      --muted: #5f6b7e;
+      --accent: #4f46e5;
+      --accent-soft: #eceafd;
+      --border: #e3e8ef;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1420;
+        --card: #181f2e;
+        --text: #e8ecf4;
+        --muted: #9aa6ba;
+        --accent: #8b87ff;
+        --accent-soft: #252a47;
+        --border: #283046;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .hero {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: #fff;
+      padding: 72px 20px 64px;
+      text-align: center;
+    }
+    .hero h1 { margin: 0; font-size: 2.6rem; }
+    .hero p { margin: 10px 0 0; font-size: 1.15rem; opacity: 0.92; }
+    .buttons { margin-top: 28px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      background: #fff;
+      color: #4f46e5;
+    }
+    .btn.outline { background: transparent; color: #fff; border: 2px solid rgba(255, 255, 255, 0.7); }
+    main { max-width: 860px; margin: 0 auto; padding: 20px; }
+    section { margin-top: 40px; }
+    h2 { font-size: 1.4rem; margin-bottom: 16px; }
+    h2::after {
+      content: "";
+      display: block;
+      width: 44px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin-top: 6px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .note { color: var(--muted); font-size: 0.9rem; margin-top: 12px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .lang { display: flex; justify-content: space-between; align-items: center; }
+    .lang strong { font-size: 1.05rem; }
+    .level { color: var(--accent); font-weight: 700; }
+    .project h3 { margin: 0 0 6px; }
+    .project h3 a { color: var(--text); text-decoration: none; }
+    .project h3 a:hover { color: var(--accent); }
+    .project p { margin: 0 0 14px; color: var(--muted); }
+    footer { text-align: center; color: var(--muted); padding: 40px 20px; font-size: 0.9rem; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Meerim Myrzalieva</h1>
+    <p>Computer Science student at Vizja University, Poland</p>
+    <div class="buttons">
+      <a class="btn" href="https://github.com/MeerimMeerim">GitHub</a>
+      <a class="btn outline" href="mailto:meerimmyrzalieva6@gmail.com">Contact me</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>About me</h2>
+      <div class="card">
+        I am a second-year Computer Science student looking for a 2-month internship.
+        I speak six languages and enjoy learning new technologies through hands-on projects.
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="card">
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">C++</span>
+          <span class="chip">SQL</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+        </div>
+        <p class="note">Current level: basic. Actively practising through projects.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <div class="grid">
+        <div class="card lang"><strong>Kyrgyz</strong><span class="level">Native</span></div>
+        <div class="card lang"><strong>Russian</strong><span class="level">C2</span></div>
+        <div class="card lang"><strong>English</strong><span class="level">B2+</span></div>
+        <div class="card lang"><strong>Polish</strong><span class="level">A2+</span></div>
+        <div class="card lang"><strong>Turkish</strong><span class="level">B1</span></div>
+        <div class="card lang"><strong>Kazakh</strong><span class="level">B1</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="card project">
+        <h3><a href="https://github.com/MeerimMeerim/expense-tracker">Expense Tracker</a></h3>
+        <p>A command-line application for tracking personal expenses. Users can add expenses with a category, amount and note, and view them sorted by date. Data is stored in a local SQLite database.</p>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">SQLite</span>
+          <span class="chip">SQL</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Meerim Myrzalieva. Built with HTML and CSS.
+  </footer>
+
+</body>
+</html>
